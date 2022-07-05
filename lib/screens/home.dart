@@ -44,9 +44,8 @@ class _HomeState extends State<Home> {
         AuthorizationTokenRequest(
           Environment.clientId!,
           Environment.redirectUri!,
-          discoveryUrl:
-              'http://localhost:8080/realms/flutter_test/.well-known/openid-configuration',
-          clientSecret: 'jhMDMZJ7gTsOsueO72yvgpB8p6oiZkHh',
+          discoveryUrl: 'example/realm-name',
+          clientSecret: 'client-secret',
           scopes: ['openid', 'profile', 'email', 'offline_access'],
           promptValues: ['login'],
         ),
@@ -104,9 +103,8 @@ class _HomeState extends State<Home> {
         TokenRequest(
           Environment.clientId!,
           Environment.redirectUri!,
-          clientSecret: 'jhMDMZJ7gTsOsueO72yvgpB8p6oiZkHh',
-          discoveryUrl:
-              'http://localhost:8080/realms/flutter_test/.well-known/openid-configuration',
+          clientSecret: 'client-secret',
+          discoveryUrl: 'example/realm-name',
           refreshToken: storedRefreshToken,
         ),
       );
